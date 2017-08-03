@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script type="text/javascript">
+        var HTMLString = "";
+        for (i=0; i<8; i++) {
+            HTMLString += '<img src="codercat.jpg" second-src="daftpunk.gif" alt="">'
+        }
+        $(document).ready (function () {
+            $("main").append(HTMLString);
+
+            $("img").hover(
+                function() {
+                    var original = $(this).attr("src");
+                    $(this).attr("src", $(this).attr("second-src"));
+                    $(this).attr("second-src", original);
+                },
+                function() {
+                    var original = $(this).attr("src");
+                    $(this).attr("src", $(this).attr("second-src"));
+                    $(this).attr("second-src", original);
+                }
+            )
+        })
+    </script>
+    <style>
+        img {width: 150px; height: 150px;}
+        body {text-align: center;}
+    </style>
+    <title>Hover In/Out</title>
+</head>
+<body>
+    <header>
+        <h1>Hover In/Out</h1>
+    </header>
+    <main>
+    </main>
+</body>
+</html>

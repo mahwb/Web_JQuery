@@ -1,0 +1,12 @@
+img {
+    width: 200px;
+    height: auto;
+    display: inline-block;
+}
+main {
+    width: 900px;
+    margin: 0 auto;
+}
+body {
+    text-align: center;
+}

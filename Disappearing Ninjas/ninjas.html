@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Disappearing Ninjas</title>
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        var HTMLString = ""
+        for (i=0; i<8; i++) {
+            HTMLString += '<img src="dojocat.jpg" alt="">';
+        }
+        $(document).ready(function () {
+            $("main").append(HTMLString);
+            $("img").click(function() {
+                $(this).hide();
+            });
+            $("button").click(function() {
+                $("img").show();
+            });
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Disappearing Ninjas</h1>
+    </header>
+    <main>
+    </main>
+    <footer>
+        <button>Restore</button>
+    </footer>
+</body>
+</html>

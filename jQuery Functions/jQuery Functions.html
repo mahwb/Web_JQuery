@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Practice</title>
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button.hide").click(function () {
+                $("p").hide();
+            });
+            $("button.show").click(function () {
+                $("p").show();
+            });
+            $("button.toggle").click(function () {
+                $("p").toggle();
+            });
+            $("button.slideDown").click(function () {
+                $("p").slideDown();
+            });
+            $("button.slideUp").click(function () {
+                $("p").slideUp();
+            });
+            $("button.slideToggle").click(function () {
+                $("p").slideToggle();
+            });
+            $("button.fadeIn").click(function () {
+                $("p").fadeIn();
+            });
+            $("button.fadeOut").click(function () {
+                $("p").fadeOut();
+            });
+            $("button.addClass").click(function () {
+                $("p").css("color", "red");
+            });
+            $("button.before").click(function () {
+                $("#first").before("<p>Before first paragraph</p>");
+            });
+            $("button.after").click(function () {
+                $("#first").after("<p>After first paragrah</p>");
+            });
+            $("button.append").click(function () {
+                $("#first").append("<strong>APPENDED</strong>");
+            });
+            $("button.html").click(function () {
+                $("#first").html("New paragraph.");
+            });
+            $("button.attr").click(function () {
+                alert("Attr of p id is " + $("#first").attr("id"));
+            });
+            $("button.val").click(function () {
+                alert("value of input[name=first_name] is " + $("input[name=first_name]").val());
+            });
+            $("button.text").click(function () {
+                var str = $("#first").text();
+                $("p:last").html(str);
+            });
+            $("button.data").click(function () {
+                $("#form").data("first_name", $("input[name=first_name]").val());
+                alert("Stored first_name and input value to object = " + $("#form").data() + "\n" + $("#form").data("first_name"));
+            });
+        })
+    </script>
+    <style>
+        body {text-align: center;}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>jQuery Practice</h1>
+    </header>
+    <main>
+        <button class="hide">Hide</button>
+        <button class="show">Show</button>
+        <button class="slideDown">Slide Down</button>
+        <button class="slideUp">Slide Up</button>
+        <button class="slideToggle">Slide Toggle</button>
+        <button class="fadeIn">Fade In</button>
+        <button class="fadeOut">Fade Out</button>
+        <button class="addClass">Add Class</button>
+        <button class="before">Add Before</button>
+        <button class="after">Add After</button>
+        <button class="append">Append</button>
+        <button class="html">Add HTML</button>
+        <button class="attr">Attribute</button>
+        <button class="val">Value</button>
+        <button class="text">Text</button>
+        <button class="data">Data</button>
+
+        <p id="first"><strong>Lorem ipsum </strong>dolor sit amet, consectetur adipisicing elit. Libero quam, voluptas accusamus nobis, labore delectus
+            ipsa incidunt at! Quisquam nihil inventore mollitia sunt cum totam libero voluptas dolore corporis quaerat.</p>
+        <p></p>
+        <form id="form">
+            First Name: <input type="text" name="first_name" value="test name">
+        </form>
+    </main>
+</body>
+
+</html>
